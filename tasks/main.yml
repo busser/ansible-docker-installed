@@ -5,12 +5,11 @@
 #   lvm2
 - name: Install required packages
   yum:
-    pkg: "{{ item }}"
+    pkg:
+    - device-mapper-persistent-data-0.7.3
+    - lvm2-2.02.177
+    - yum-utils-1.1.31
     state: installed
-  with_items:
-  - device-mapper-persistent-data-0.7.3-3
-  - lvm2-7:2.02.177-4
-  - yum-utils-1.1.31-46
 
 # # yum-config-manager \
 # #   --add-repo \
@@ -34,5 +33,5 @@
 #   docker-ce
 - name: Install Docker CE
   yum:
-    pkg: docker-ce-18.06.1.ce-3
+    pkg: docker-ce-18.06.1.ce
     state: installed
