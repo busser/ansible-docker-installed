@@ -6,9 +6,9 @@
 - name: Install required packages
   yum:
     pkg:
-    - device-mapper-persistent-data-0.7.3
-    - lvm2-2.02.177
-    - yum-utils-1.1.31
+    - device-mapper-persistent-data
+    - lvm2
+    - yum-utils
     state: installed
 
 # # yum-config-manager \
