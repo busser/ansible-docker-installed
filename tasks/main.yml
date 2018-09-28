@@ -34,7 +34,7 @@
 - name: Install Docker CE
   yum:
     pkg: docker-ce-{{ docker_version }}.*
-    state: installed
+    allow_downgrade: yes
 
 # systemctl daemon-reload
 # systemctl start docker
